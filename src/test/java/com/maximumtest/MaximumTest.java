@@ -1,73 +1,39 @@
 package com.maximumtest;
 
 
+import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 
 public class MaximumTest {
-    private static MaximumNumber maximumNumber=new MaximumNumber();
+    private static MaximumNumber maximumNumber;
 
     @Test
-    public void givenMaximumNumberAtFirstPositionShouldReturnSameNumber() {
-        Integer [] intArray = {10 , 9 , 3};
-        Integer result = maximumNumber.findMaximum(intArray);
-        Assertions.assertEquals(Integer.valueOf(10), result);
+    public void givenThreeMaximumNumbersAndPrintIntegerMaximumNumber() {
+        Integer int1=30;
+        Integer int2=42;
+        Integer int3=4;
+        maximumNumber = new MaximumNumber(int1, int2, int3);
+        Object result = maximumNumber.findMaximum();
+        Assertions.assertEquals(int2, result);
     }
 
     @Test
-    public void givenMaximumNumberAtSecondPositionShouldReturnSameNumber() {
-        Integer [] intArray = {1 , 48 , 5};
-        Integer result = maximumNumber.findMaximum(intArray);
-        Assertions.assertEquals(Integer.valueOf(48), result);
+    public void givenThreeMaximumNumbersAndPrintFloatMaximumNumber() {
+        Float float1=1.5f;
+        Float float2=1.1f;
+        Float float3=5.5f;
+        maximumNumber = new MaximumNumber(float1, float2, float3);
+        Object result = maximumNumber.findMaximum();
+        Assertions.assertEquals(float3, result);
     }
 
     @Test
-    public void givenMaximumNumberAtThirdPositionShouldReturnSameNumber() {
-        Integer [] intArray = {1 , 48 , 54};
-        Integer result = maximumNumber.findMaximum(intArray);
-        Assertions.assertEquals(Integer.valueOf(54), result);
-    }
-
-    @Test
-    public void givenMaximumNumberAtFirstPositionShouldReturnFloatSameNumber() {
-        Double [] doulbeArray = {5.8, 1.2, 3.4};
-        Double result = maximumNumber.findMaximum(doulbeArray);
-        Assertions.assertEquals(Double.valueOf(5.8), result);
-    }
-    
-    @Test
-    public void givenMaximumNumberAtSecondPositionShouldReturnFloatSameNumber() {
-        Double [] doulbeArray = {5.2, 8.9, 2.1};
-        Double result = maximumNumber.findMaximum(doulbeArray);
-        Assertions.assertEquals(Double.valueOf(8.9), result);
-    }
-
-
-    @Test
-    public void givenMaximumNumberAtThirdPositionShouldReturnFloatSameNumber() {
-        Double [] doulbeArray = {5.9, 2.1, 7.6};
-        Double result = maximumNumber.findMaximum(doulbeArray);
-        Assertions.assertEquals(Double.valueOf(7.6), result);
-    }
-
-    @Test
-    public void givenMaximumNumberAtFirstPositionShouldReturnStringSameNumber() {
-        String [] stringArray = {"Banana", "Apple", "Peach"};
-        String result = maximumNumber.findMaximum(stringArray);
-        Assertions.assertEquals("Banana", result);
-    }
-
-    @Test
-    public void givenMaximumNumberAtSecondPositionShouldReturnStringSameNumber() {
-        String [] stringArray = {"Peach", "apple", "Banana"};
-        String result = maximumNumber.findMaximum(stringArray);
-        Assertions.assertEquals("apple", result);
-    }
-
-    @Test
-    public void givenMaximumNumberAtThirdPositionShouldReturnStringSameNumber() {
-        String [] stringArray = {"Banana", "Apple", "Peach"};
-        String result = maximumNumber.findMaximum(stringArray);
-        Assertions.assertEquals("Peach", result);
+    public void givenThreeMaximumNumbersAndPrintStringMaximumNumber() {
+        String str1="Peach";
+        String str2="Apple";
+        String str3="Banana";
+        maximumNumber = new MaximumNumber(str1, str2, str3);
+        Object result = maximumNumber.findMaximum();
+        Assertions.assertEquals(str1, result);
     }
 }
