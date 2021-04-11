@@ -1,27 +1,50 @@
 package com.maximumtest;
 
-public class MaximumNumber<K extends Comparable<K>> {
-    private K x;
-    private K y;
-    private K z;
 
-    public MaximumNumber(K x, K y, K z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
+/* @Description- Three integer to find the maximum using compareTo method
+*  Three float to find the maximum using compareTo method
+* Three string to find the maximum using compareTo method
+*  using max method to find more than one parameter
+ */
+public class MaximumNumber<K extends Comparable<K>> {
+    private K a;
+    private K b;
+    private K c;
+    private K d;
+    private K e;
+
+    public MaximumNumber(K a, K b, K c, K d, K e) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
+        this.e = e;
     }
 
     public K findMaximum() {
-        return MaximumNumber.findMaximum(x, y, z);
+        K findMaximum = MaximumNumber.findMaximum(a, b, c, d, e);
+        printMaximum(findMaximum());
+        return  findMaximum();
     }
 
-    public static <K extends Comparable> K findMaximum(K x, K y, K z) {
-        K max = x;
-        if (y.compareTo(max) > 0 ) {
-            max = y;
+    public void printMaximum(K maximum) {
+        System.out.println("Maximum" +maximum);
+    }
+
+    //Single generic method to compare different types of data
+    public static <K extends Comparable> K findMaximum(K a, K b, K c, K d, K e) {
+        K max = b;
+        if (b.compareTo(max) > 0 ) {
+            max = b;
         }
-        if (z.compareTo(max) > 0 ) {
-            max = z;
+        if (c.compareTo(max) > 0 ) {
+            max = c;
+        }
+        if (d.compareTo(max) > 0 ) {
+            max = d;
+        }
+        if (e.compareTo(max) > 0 ) {
+            max = e;
         }
         return max;
     }
