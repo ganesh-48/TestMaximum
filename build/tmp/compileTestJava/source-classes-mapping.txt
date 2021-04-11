@@ -1,0 +1,2 @@
+com/maximumtest/MaximumTest.java
+ com.maximumtest.MaximumTest
